@@ -10,6 +10,7 @@ import CardManga from '../components/CardsManga';
 import Carousel from '../components/Carousel';
 import {dummyData} from '../Data/data';
 import * as Animatable from 'react-native-animatable';
+import ThemeModal from '../components/subComponent/ThemeModal';
 
 const Home = ({navigation}) => {
   const [refreshing, setRefreshing] = useState(false);
@@ -23,6 +24,7 @@ const Home = ({navigation}) => {
       <StatusBar backgroundColor="#F24C4C" barStyle="light-content" />
       <Carousel data={dummyData} navigation={navigation} />
       <Animatable.View animation="fadeInUpBig" style={styles.main}>
+        <ThemeModal />
         <TouchableOpacity onPress={onPresshandler}>
           <CardManga />
         </TouchableOpacity>

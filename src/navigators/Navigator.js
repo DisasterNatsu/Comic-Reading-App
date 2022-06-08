@@ -10,11 +10,14 @@ import ComicDetails from '../screens/comicDetails';
 import DrawerStack from '../Stacks/DrawerStack';
 import ReadingScreen from '../screens/ReadingScreen';
 import {ThemeContext} from '../Context/ThemeContext';
+import {useTheme} from '@react-navigation/native';
 
 const Stack = createStackNavigator();
 
 const Navigator = () => {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
+
+  const Theme = useTheme();
 
   // Getiing The Device's Color Scheme
   const phoneTheme = useColorScheme();
